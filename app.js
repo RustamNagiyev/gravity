@@ -143,18 +143,7 @@ function playYouTubeVideo() {
   
  
   
-  function toggleSearchInput() {
-    var searchInputContainer = document.querySelector('.search-input-container');
-    var searchInput = document.querySelector('#searchInput');
-    searchInputContainer.classList.toggle('active');
 
-    if (searchInputContainer.classList.contains('active')) {
-        searchInput.focus();
-    } else {
-        searchInput.value = '';
-        clearSearchHighlights();
-    }
-}
 
 function search(event) {
     var searchValue = event.target.value.toLowerCase();
@@ -241,6 +230,7 @@ function showImages(category) {
 
         scrollToFirstMatch();
     }
+    git init
 
     function clearSearchHighlights() {
         var searchItems = document.querySelectorAll('.searchable');
