@@ -1,49 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Sayfası</title>
-  <link rel="stylesheet" href="stile.css">
-</head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Sayfası</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="stile.css" />
+    <!-- Link Swiper's CSS\ -->
+  </head>
+  <body>
+    <header>
       <nav class="navbar">
         <div class="navbar-left">
-          <span class="logo">Gravity</span>
+           <a href="#"><span class="logo">Gravity</span></a>
         </div>
         <div class="navbar-center">
-          <span class="search-icon">&#128269;</span>
+            <span class="search-icon" onclick="toggleSearchInput()">&#128269;</span>
+            <div class="search-input-container">
+                <input type="text" class="search-input" placeholder="Search..." onkeypress="search(event)">
+                <button class="btva" id="scrollButtonUp">&#8593;</button>
+                <button class="btnv" id="scrollButton">&#8595;</button>
+            </div>
         </div>
         <div class="navbar-right">
-          <span class="menu-icon">&#9776;</span>
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
         </div>
-      </nav>
-    <div class="container">
-        <div class="flex1">
-    <h1 class="h11">Work around you and your team</h1>
-    <p class="p1">Gravity</p>
-    <button class="startbtn">GET STARTED</button>
+    </nav>
+      <div class="menu-panel" id="menuPanel">
+        <div class="menucontainer">
+        <button class="btnmenu" onclick="scrollToSection('services')">SERVICES</button>
+        <button class="btnmenu" onclick="scrollToSection('our-works')">OUR WORKS</button>
+        <button class="btnmenu" onclick="scrollToSection('testimonials')">TESTIMONIALS</button>
+      </div>
+    </div>
+  
+  </header>
+    <main>
+     
+      <div class="container">
+  <div class="flex1">
+    <h1 class="h11 searchable">Work around you and your team</h1>
+    <p class="p1 searchable">Gravity</p>
+    <button class="startbtn searchable">GET STARTED</button>
+  </div>
+  <div class="flex2">
+    <img class="img1" src="./image/Placeholder.svg" alt="Image 1" />
+  </div>
 </div>
-<div class="flex2">
-    <img class="img1" src="./image/Placeholder.svg" alt="Image 1">
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+  
+    <div class="video-container">
+      <iframe class="video1" src="https://www.youtube.com/embed/AvZFKQT8yTc" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
-    
-</div>
-<video class="video1" src="./image/Video.svg" controls></video>
 
-<div class="container2">
-    <div class="flex3">
-<img class="img2" src="./image/Placeholder (1).svg" alt="Image 1">
-</div>
-<p class="htwo">We solve digital problems with an outstanding creative flare</p>
-<p class="text">The best time to view the moon, obviously, is at night when there are few clouds and the weather is accommodating for a long and lasting study.</p>
-<p class="text">For most of us, the idea of astronomy is something we directly connect to “stargazing”, telescopes and seeing magnificent displays in the heavens.</p>
-<p class="pname">Denis Shepovalov</p>
-<p class="pworkname">Co-Founder & CEO</p>
-    
-</div>
-</body>
-    </html>
+    <div class="container2">
+      <div class="flex3">
+        <img class="img2" src="./image/Placeholder (1).svg" alt="Image 1" />
+      </div>
+      <div class="flex4">
+        <p class="htwo searchable">
+          We solve digital problems with an outstanding creative flare
+        </p>
+        <p class="text searchable">
+          The best time to view the moon, obviously, is at night when there are
+          few clouds and the weather is accommodating for a long and lasting
+          study.
+        </p>
+        <p class="text searchable">
+          For most of us, the idea of astronomy is something we directly connect
+          to “stargazing”, telescopes and seeing magnificent displays in the
+          heavens.
+        </p>
+        <div class="container3">
+          <div>
+            <img class="img3" src="./image/Ellipse (1).svg" alt="Image 1" />
+          </div>
+          <div>
+            <p class="pname searchable">Denis Shepovalov</p>
+            <p class="pworkname searchable">Co-Founder & CEO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="services">
+    <p class="servis">— Services</p>
+  </section>
+    <div class="container4">
+      <div class="flex5">
+        <p class="hthree searchable">
+          We love work hard and explore new things that’s why we cover lot of
+          things. Check our service list and view details
+        </p>
+      </div>
 
+      <div class="flex6">
+        <div class="container5">
+          <div class="flex7">
+            <p class="table2 searchable">Multimedia</p>
+            <p class="table searchable">Interactive design</p>
+            <p class="table searchable">Packaging</p>
+            <p class="table searchable">Branding</p>
+          </div>
+
+          <div class="flex7">
+            <p class="table2 searchable">Creative Strategy</p>
+            <p class="table searchable">UI/UX</p>
+            <p class="table searchable">Coding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slideshow-container">
+      <img class="slide-img" src="./image/Vector.svg" alt="vector" />
+      <img class="slide-img" src="./image/4b75bf99daaf38d8a95f77d90b97b8a0.jpg" alt="vector" />
+    </div>
+    <div>
+      <button class="turn1" onclick="previousSlide()"><</button>
+      <button class="turn2" onclick="nextSlide()">></button>
+    </div>
+    <div class="container6">
+      <div class="flex8">
+        <img class="img5" src="./image/Frame.svg" alt="frame" />
+      </div>
+      <div class="flex9">
+        <p class="hfour searchable">Well thought with super easy to use</p>
+        <p class="text2 searchable">
+          As we approached the palace I could see through the great windows of
+          the first floor the brilliantly illuminated audience chamber of Than
+          Kosis. The immense hall was crowded with nobles and their women.
+        </p>
+        <div class="flextext">
+          <img class="oneimg" src="./image/100 icon.svg" alt="one" />
+          <p searchable>Ultimate Result</p>
+        </div>
+        <div class="flextext">
+          <img class="bagimg" src="./image/Bag icon.svg" alt="bag" />
+
+          <p searchable>Minimal Design</p>
+        </div>
+      </div>
+    </div>
+    <section id="our-works">
+<p class="works searchable">— our works</p>
+    </section>
+<div class="container7">
+<div class="flextext2">
+  <p class="hfive searchable">
+  Discover our Work
+</p>
+</div>
+<div class="flextext3">
+  <button class="nav searchable" onclick="showImages('all')">All</button>
+  <button class="nav searchable" onclick="showImages('branding')">Branding</button>
+  <button class="nav searchable" onclick="showImages('web')">Web</button>
+  <button class="nav searchable" onclick="showImages('development')">Development</button>
+  <button class="nav searchable" onclick="showImages('films')">Films</button>  
+</div>
+</div>
+
+<div class="container8">
+<img class="imghover" src="./image/Placeholder (5).svg" alt="Resim 1">
+<img class="imghover" src="./image/Placeholder (2).svg" alt="Resim 4">
+<img class="imghover" src="./image/Placeholder (3).svg" alt="Resim 5">
+<img class="imghover" src="./image/Placeholder.svg" alt="Resim 2">
+<img class="imghover" src="./image/Placeholder (1).svg" alt="Resim 3">
+<img class="imghover" src="./image/Placeholder (4).svg" alt="Resim 6">
+</div>
+<div class="container9">
+<div class="text3 searchable">It picks up the words on the page and displays ads that are similar to those words. Then when someone either performs an action or clicks on your page you will get paid.</div>
+<button class="see searchable">SEE OUR WORKS</button>
+</div>
+
+<div class="container11">
+  <div class="flex10">
+    <section id="testimonials">
+    <p class="servis searchable">— Testimonials</p>
+  </section>
+    <p class="text4 searchable">"Professionals in their craft! All products were super great with strong attention to details, and overall vibe"</p>
+    <p class="name searchable">Polina Kuzina</p>
+    <p class="manager searchable">Manager at Craftwork</p>
+    <div class="container10">
+      <button class="btnleft" onclick="prevSlide2()"><</button>
+      <button class="btnright" onclick="nextSlide2()">></button>
+    </div>
+  </div>
+  <div class="flex11">
+    <img class="imggirl" src="./image/Placeholder (6).svg" alt="Resim 6">
+  </div>
+</div>
+
+<section class="section">
+<div class="container12">
+  <div class="flextext4">
+<p class="clients searchable">Our Clients</p>
+</div>
+<div class="flextext5">
+<p class="textwork searchable">— We worked with</p>
+<p class="textwork2 searchable">Our favorite brands are our friends! We help them to achieve their goals, they help us to stay sharp.</p>
+</div>
+</div>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+  <img class="swiper-slide" src="./image/xiaomi.svg" alt="Resim 6" class="image">
+  <img class="swiper-slide" src="./image/tinder.svg" alt="Resim 6" class="image">
+  <img class="swiper-slide" src="./image/apple.svg" alt="Resim 6" class="image">
+  <img class="swiper-slide" src="./image/nike.svg" alt="Resim 6" class="image">
+  <img class="swiper-slide" src="./image/amd.svg" alt="Resim 6" class="image">
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</section>
+<footer>
+  <p class="gravity searchable">Gravity</p>
+</footer>
+<!-- javascript -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script src="./app.js"></script>
 </body>
 </html>
