@@ -230,7 +230,6 @@ function showImages(category) {
 
         scrollToFirstMatch();
     }
-    git init
 
     function clearSearchHighlights() {
         var searchItems = document.querySelectorAll('.searchable');

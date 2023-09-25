@@ -422,10 +422,8 @@ margin-left: 150px;
 
 .textwork{
     margin-top: 120px;
-    font-family: 'Fira Sans', sans-serif;
-    
+    font-family: 'Fira Sans', sans-serif; 
     font-size: 22px;
-   
 }
 .textwork2{
    margin-right: 150px;
@@ -443,7 +441,7 @@ margin-left: 150px;
     font-family: 'Fira Sans', sans-serif;
     
 }
-footer{
+.footer{
     background-color: #515151;
 }
 .pname{
@@ -461,10 +459,6 @@ footer{
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
 }
-
-
-
-
 
 .search-input-container {
   display: none;
@@ -503,17 +497,6 @@ footer{
   top: 64px;
   right: 460px;
 }
-
-
-
-
-
-
-
-
-
-
-
 .menu-icon {
   cursor: pointer;
 }
