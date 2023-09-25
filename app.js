@@ -18,7 +18,7 @@ var scrollButtonUp = document.getElementById('scrollButtonUp');
 //slayd ucun array
 var testimonials = [
   {
-    image: "./image/Placeholder (6).svg",
+    image: "./image/Placeholdersix.svg",
     text: "Professionals in their craft! All products were super great with strong attention to details, and overall vibe",
     name: "Polina Kuzina",
     manager: "Manager at Craftwork"
@@ -84,11 +84,6 @@ function previousSlide() {
 }
 
 showSlide(currentSlide);
-
-
-
-
-
 
 
 function showSlide2() {
